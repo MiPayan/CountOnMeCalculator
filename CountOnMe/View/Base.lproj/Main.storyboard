@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eqK-jh-KKu">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Calculation View Controller-->
+        <scene sceneID="BSq-PH-znu">
+            <objects>
+                <viewController id="eqK-jh-KKu" customClass="CalculationViewController" customModule="CountOnMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tQO-Y2-VWE"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fhl-dE-gDl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eIh-hr-C95">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="T2H-yn-nBB">
+                                <rect key="frame" x="20" y="44" width="374" height="404"/>
+                                <color key="backgroundColor" red="0.75294119120000003" green="0.75294119120000003" blue="0.75294119120000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7np-Ed-2IS">
+                                <rect key="frame" x="20" y="468" width="374" height="374"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kU6-xe-hsN">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="87.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2w-Y4-3aO" customClass="CalculButton" customModule="CountOnMe" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="87.5"/>
+                                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="c2w-Y4-3aO" secondAttribute="height" multiplier="1:1" id="ky7-Oo-mCO"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tappedNumberButton:" destination="eqK-jh-KKu" eventType="touchUpInside" id="vkd-lr-8yj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wks-zb-faH" customClass="CalculButton" customModule="CountOnMe" customModuleProvider="target">
+                                                <rect key="frame" x="95.5" y="0.0" width="87.5" height="87.5"/>
+                                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Wks-zb-faH" secondAttribute="height" multiplier="1:1" id="uqU-Tv-72r"/>
+                                                </constraints>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tappedNumberButton:" destination="eqK-jh-KKu" eventType="touchUpInside" id="Mer-Xb-dMU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSE-P4-cMx" customClass="CalculButton" customModule="CountOnMe" customModuleProvider="target">
+                                                <rect key="frame" x="191" y="0.0" width="87.5" height="87.5"/>
+                                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="lSE-P4-cMx" secondAttribute="height" multiplier="1:1" id="BfQ-1l-tBV"/>
+                                                </constraints>
+                                                <state key="normal" title="9">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tappedNumberButton:" destination="eqK-jh-KKu" eventType="touchUpInside" id="DEb-Qn-Iba"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Vr-xx-7yw" customClass="CalculButton" customModule="CountOnMe" customModuleProvider="target">
+                                                <rect key="frame" x="286.5" y="0.0" width="87.5" height="87.5"/>
+                                                <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="8Vr-xx-7yw" secondAttribute="height" multiplier="1:1" id="uQY-CD-J3s"/>
+                                                </constraints>
+                                                <state key="normal" title="AC">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tappedClearButton" destination="eqK-jh-KKu" eventType="touchUpInside" id="m4o-2E-cTc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Nwq-Cr-32e">
+                                        <rect key="frame" x="0.0" y="95.5" width="374" height="87.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESv-kn-fYd" customClass="CalculButton" customModule="CountOnMe" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="87.5"/>
+                                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ESv-kn-fYd" secondAttribute="height" multiplier="1:1" id="puv-zt-Vay"/>
+                                                </constraints>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tappedNumberButton:" destination="eqK-jh-KKu" eventType="touchUpInside" id="XdN-cD-7Z0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYe-Z1-lPH" customClass="CalculButton" customModule="CountOnMe" customModuleProvider="target">
+                                                <rect key="frame" x="95.5" y="0.0" width="87.5" height="87.5"/>
+                                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="BYe-Z1-lPH" secondAttribute="height" multiplier="1:1" id="cRS-zE-1PP"/>
+                                                </constraints>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tappedNumberButton:" destination="eqK-jh-KKu" eventType="touchUpInside" id="CBE-vL-VAF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WL-rG-fzO" customClass="CalculButton" customModule="CountOnMe" customModuleProvider="target">
+                                                <rect key="frame" x="191" y="0.0" width="87.5" height="87.5"/>
+                                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="2WL-rG-fzO" secondAttribute="height" multiplier="1:1" id="IOt-og-UE0"/>
+                                                </constraints>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tappedNumberButton:" destination="eqK-jh-KKu" eventType="touchUpInside" id="8s1-Od-tFr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hu-Vh-6RR" customClass="CalculButton" customModule="CountOnMe" customModuleProvider="target">
+                                                <rect key="frame" x="286.5" y="0.0" width="87.5" height="87.5"/>
+                                                <color key="backgroundColor" red="0.45196643419999999" green="0.50513384490000002" blue="0.63708370920000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="0hu-Vh-6RR" secondAttribute="height" multiplier="1:1" id="lol-As-Seh"/>
+                                                </constraints>
+                                                <state key="normal" title="/">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tappedOperator:" destination="eqK-jh-KKu" eventType="touchUpInside" id="e90-Vx-zK3"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="loy-Gl-0pg">
+                                        <rect key="frame" x="0.0" y="191" width="374" height="87.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mt6-Ju-E4X" customClass="CalculButton" customModule="CountOnMe" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="87.5"/>
+                                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Mt6-Ju-E4X" secondAttribute="height" multiplier="1:1" id="fQd-m2-Gbc"/>
+                                                </constraints>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tappedNumberButton:" destination="eqK-jh-KKu" eventType="touchUpInside" id="oax-20-OSK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXJ-qD-O39" customClass="CalculButton" customModule="CountOnMe" customModuleProvider="target">
+                                                <rect key="frame" x="95.5" y="0.0" width="87.5" height="87.5"/>
+                                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="bXJ-qD-O39" secondAttribute="height" multiplier="1:1" id="jsu-C5-Rzw"/>
+                                                </constraints>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tappedNumberButton:" destination="eqK-jh-KKu" eventType="touchUpInside" id="vxk-pa-ocP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8d-aE-aMt" customClass="CalculButton" customModule="CountOnMe" customModuleProvider="target">
+                                                <rect key="frame" x="191" y="0.0" width="87.5" height="87.5"/>
+                                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="U8d-aE-aMt" secondAttribute="height" multiplier="1:1" id="eFL-lE-l6g"/>
+                                                </constraints>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tappedNumberButton:" destination="eqK-jh-KKu" eventType="touchUpInside" id="WEL-Rk-BZs"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="za9-2m-1YC" customClass="CalculButton" customModule="CountOnMe" customModuleProvider="target">
+                                                <rect key="frame" x="286.5" y="0.0" width="87.5" height="87.5"/>
+                                                <color key="backgroundColor" red="0.63708370920000001" green="0.49940575799999998" blue="0.62599914300000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="za9-2m-1YC" secondAttribute="height" multiplier="1:1" id="YQy-Ab-TS8"/>
+                                                </constraints>
+                                                <state key="normal" title="x">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tappedOperator:" destination="eqK-jh-KKu" eventType="touchUpInside" id="fhu-X9-1lz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uJx-3a-s4M">
+                                        <rect key="frame" x="0.0" y="286.5" width="374" height="87.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbB-g1-cTS" customClass="CalculButton" customModule="CountOnMe" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="87.5"/>
+                                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="UbB-g1-cTS" secondAttribute="height" multiplier="1:1" id="oPM-yb-MTd"/>
+                                                </constraints>
+                                                <state key="normal" title="0">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tappedNumberButton:" destination="eqK-jh-KKu" eventType="touchUpInside" id="ULK-jv-xJW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoI-vD-41p" customClass="CalculButton" customModule="CountOnMe" customModuleProvider="target">
+                                                <rect key="frame" x="95.5" y="0.0" width="87.5" height="87.5"/>
+                                                <color key="backgroundColor" red="0.90196073060000004" green="0.6549019814" blue="0.26274511220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="KoI-vD-41p" secondAttribute="height" multiplier="1:1" id="NQX-OT-1TD"/>
+                                                </constraints>
+                                                <state key="normal" title="=">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tappedEqualButton:" destination="eqK-jh-KKu" eventType="touchUpInside" id="V5N-ki-FmQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0K-lI-Zfb" customClass="CalculButton" customModule="CountOnMe" customModuleProvider="target">
+                                                <rect key="frame" x="191" y="0.0" width="87.5" height="87.5"/>
+                                                <color key="backgroundColor" red="0.50588238240000005" green="0.68235301969999995" blue="0.60392159219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="O0K-lI-Zfb" secondAttribute="height" multiplier="1:1" id="qjw-nM-9Y4"/>
+                                                </constraints>
+                                                <state key="normal" title="+">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tappedOperator:" destination="eqK-jh-KKu" eventType="touchUpInside" id="8yS-fu-gKH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gfp-3A-jpo" customClass="CalculButton" customModule="CountOnMe" customModuleProvider="target">
+                                                <rect key="frame" x="286.5" y="0.0" width="87.5" height="87.5"/>
+                                                <color key="backgroundColor" red="0.79607844350000001" green="0.39607840779999998" blue="0.33725491169999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Gfp-3A-jpo" secondAttribute="height" multiplier="1:1" id="7Qr-b8-FQq"/>
+                                                </constraints>
+                                                <state key="normal" title="-">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tappedOperator:" destination="eqK-jh-KKu" eventType="touchUpInside" id="n0j-dp-QM9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AWJ-Vl-uau"/>
+                        <color key="backgroundColor" red="0.75294119120000003" green="0.75294119120000003" blue="0.75294119120000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="T2H-yn-nBB" firstAttribute="top" secondItem="AWJ-Vl-uau" secondAttribute="top" id="5eS-uE-VXN"/>
+                            <constraint firstItem="AWJ-Vl-uau" firstAttribute="trailing" secondItem="7np-Ed-2IS" secondAttribute="trailing" constant="20" id="A51-az-kqw"/>
+                            <constraint firstItem="AWJ-Vl-uau" firstAttribute="trailing" secondItem="T2H-yn-nBB" secondAttribute="trailing" constant="20" id="B2t-JC-kGa"/>
+                            <constraint firstItem="AWJ-Vl-uau" firstAttribute="bottom" secondItem="7np-Ed-2IS" secondAttribute="bottom" constant="20" id="JNV-5Q-jd8"/>
+                            <constraint firstItem="7np-Ed-2IS" firstAttribute="leading" secondItem="AWJ-Vl-uau" secondAttribute="leading" constant="20" id="bzf-lu-cZw"/>
+                            <constraint firstItem="7np-Ed-2IS" firstAttribute="top" secondItem="T2H-yn-nBB" secondAttribute="bottom" constant="20" id="drG-bM-Zw4"/>
+                            <constraint firstItem="T2H-yn-nBB" firstAttribute="leading" secondItem="AWJ-Vl-uau" secondAttribute="leading" constant="20" id="pw9-5q-rnN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="divideButton" destination="0hu-Vh-6RR" id="8qe-QE-g0a"/>
+                        <outlet property="minusButton" destination="Gfp-3A-jpo" id="vBd-14-yyD"/>
+                        <outlet property="multiplyButton" destination="za9-2m-1YC" id="Skq-E4-TZo"/>
+                        <outlet property="plusButton" destination="O0K-lI-Zfb" id="rh2-Bm-fC5"/>
+                        <outlet property="textView" destination="T2H-yn-nBB" id="HqL-wf-UHi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7XP-3c-sJZ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86.956521739130437" y="219.64285714285714"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="0hu-Vh-6RR">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="2WL-rG-fzO">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="8Vr-xx-7yw">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="BYe-Z1-lPH">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="ESv-kn-fYd">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="Gfp-3A-jpo">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="KoI-vD-41p">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="Mt6-Ju-E4X">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="O0K-lI-Zfb">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="U8d-aE-aMt">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="UbB-g1-cTS">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="Wks-zb-faH">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="bXJ-qD-O39">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="c2w-Y4-3aO">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="lSE-P4-cMx">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+        <designable name="za9-2m-1YC">
+            <size key="intrinsicContentSize" width="30" height="30"/>
+        </designable>
+    </designables>
+</document>
