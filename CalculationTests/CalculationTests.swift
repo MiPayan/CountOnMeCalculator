@@ -107,4 +107,3 @@ class CalculationTests: XCTestCase {
         calculation.resolveOperation()
     }
 }
-

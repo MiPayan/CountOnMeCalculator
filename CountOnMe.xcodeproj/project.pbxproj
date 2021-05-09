@@ -89,7 +89,6 @@
 				37D722B526370709002A7A98 /* Model */,
 				37D722B426370701002A7A98 /* View */,
 				37D722B3263706F9002A7A98 /* Controller */,
-				1FA43BD4224E569900F565CB /* CalculationViewController.swift */,
 			);
 			path = CountOnMe;
 			sourceTree = "<group>";
@@ -114,6 +113,7 @@
 		37D722B3263706F9002A7A98 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1FA43BD4224E569900F565CB /* CalculationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
