@@ -10,11 +10,11 @@ import Foundation
 
 final class Calculation {
     
-    var displayResultHundler: (_ result: String) -> Void = {_ in }
+    var displayResultHandler: (_ result: String) -> Void = {_ in }
     
-    var displayCalculText = "" {
+    private var displayCalculText = "" {
         didSet {
-            displayResultHundler(displayCalculText)
+            displayResultHandler(displayCalculText)
         }
     }
     
@@ -51,23 +51,24 @@ final class Calculation {
         
         while operationsToReduce.count > 1 {
             var operandIndex = 1
+            
+            // To manage the priority of calculations
             if let index = operationsToReduce.firstIndex(where: { $0.contains("x") || $0.contains("/")}) {
                 operandIndex = index
             }
+            // Left and right corresponding to the numbers on the left and right the operator. 
             guard let left = Double(operationsToReduce[operandIndex-1]),
                   let right = Double(operationsToReduce[operandIndex+1]) else {
                 return
             }
             let operand = operationsToReduce[operandIndex]
             var result: Double
+            
             switch operand {
             case "+": result = left + right
             case "-": result = left - right
             case "x": result = left * right
             case "/": result = left / right
-                if left == 0 || right == 0 {
-                    result = 0
-                }
             default: return
             }
             operationsToReduce.remove(at: operandIndex+1)
@@ -76,6 +77,11 @@ final class Calculation {
             operationsToReduce.remove(at: operandIndex-1)
         }
         displayCalculText.append(" = \(operationsToReduce.first!)")
+        
+        // To handle division by zero. Otherwise 0/0 = ∞ and 1/0 = + ∞
+        if displayCalculText.contains("∞") || displayCalculText.contains("NaN") {
+            displayCalculText = "Error"
+        }
     }
 }
 

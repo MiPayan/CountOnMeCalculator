@@ -19,7 +19,7 @@ final class CalculationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        calculation.displayResultHundler = { [self] result in
+        calculation.displayResultHandler = { [self] result in
             textView.text = result
         }
         calculation.clearAll()

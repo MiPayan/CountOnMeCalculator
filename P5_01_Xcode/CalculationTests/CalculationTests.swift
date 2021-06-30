@@ -26,7 +26,7 @@ class CalculationTests: XCTestCase {
         calculation.addOperator(" + ")
         calculation.addNumber("2")
         
-        calculation.displayResultHundler = { result in
+        calculation.displayResultHandler = { result in
             XCTAssertEqual("2 + 2 = 4", result)
         }
         calculation.resolveOperation()
@@ -37,7 +37,7 @@ class CalculationTests: XCTestCase {
         calculation.addOperator(" - ")
         calculation.addNumber("2")
         
-        calculation.displayResultHundler = { result in
+        calculation.displayResultHandler = { result in
             XCTAssertEqual("3 - 2 = 1", result)
         }
         calculation.resolveOperation()
@@ -48,7 +48,7 @@ class CalculationTests: XCTestCase {
         calculation.addOperator(" x ")
         calculation.addNumber("2")
         
-        calculation.displayResultHundler = { result in
+        calculation.displayResultHandler = { result in
             XCTAssertEqual("6 x 2 = 12", result)
         }
         calculation.resolveOperation()
@@ -59,19 +59,8 @@ class CalculationTests: XCTestCase {
         calculation.addOperator(" / ")
         calculation.addNumber("2")
         
-        calculation.displayResultHundler = { result in
+        calculation.displayResultHandler = { result in
             XCTAssertEqual("10 / 2 = 5", result)
-        }
-        calculation.resolveOperation()
-    }
-    
-    func testGivenZeroNumber_WhenDivideByZero_ThenOperationResolvedEqualZero() {
-        calculation.addNumber("0")
-        calculation.addOperator(" / ")
-        calculation.addNumber("0")
-            
-        calculation.displayResultHundler = { result in
-            XCTAssertEqual("0 / 0 = 0", result)
         }
         calculation.resolveOperation()
     }
@@ -87,7 +76,7 @@ class CalculationTests: XCTestCase {
         calculation.addOperator(" / ")
         calculation.addNumber("2")
         
-        calculation.displayResultHundler = { result in
+        calculation.displayResultHandler = { result in
             XCTAssertEqual("4 - 2 x 3 + 4 / 2 = 0", result)
         }
         calculation.resolveOperation()
@@ -101,7 +90,7 @@ class CalculationTests: XCTestCase {
         calculation.addOperator(" + ")
         calculation.addNumber("2")
         
-        calculation.displayResultHundler = { result in
+        calculation.displayResultHandler = { result in
             XCTAssertEqual("6 + 2 = 8", result)
         }
         calculation.resolveOperation()
