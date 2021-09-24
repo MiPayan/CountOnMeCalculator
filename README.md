@@ -30,4 +30,4 @@ App appearance has been updated. The screen drops the blue to the gray which is 
 <br />
 <br />
 
-Moreover, the plus and minus button have been added, as well as a clean button. 
+Moreover, the multiply and divide button have been added, as well as a clean button. 
