@@ -14,9 +14,8 @@ final class CalculationViewController: UIViewController {
     @IBOutlet private weak var minusButton: CalculButton!
     @IBOutlet private weak var multiplyButton: CalculButton!
     @IBOutlet private weak var divideButton: CalculButton!
-    
     private let calculation = Calculation()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         calculation.displayResultHandler = { [self] result in
@@ -30,11 +29,11 @@ private extension CalculationViewController {
     @IBAction func tappedClearButton() {
         calculation.clearAll()
     }
-    
+
     @IBAction func tappedNumberButton(_ sender: UIButton) {
         calculation.addNumber(String(sender.tag-1))
     }
-    
+
     @IBAction func tappedOperator(_ sender: UIButton) {
         switch sender {
         case plusButton:
@@ -49,7 +48,7 @@ private extension CalculationViewController {
             break
         }
     }
-    
+
     @IBAction func tappedEqualButton(_ sender: UIButton) {
         calculation.resolveOperation()
     }

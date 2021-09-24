@@ -9,26 +9,26 @@
 import Foundation
 
 final class Calculation {
-    
+
     var displayResultHandler: (_ result: String) -> Void = {_ in }
-    
+
     private var displayCalculText = "" {
         didSet {
             displayResultHandler(displayCalculText)
         }
     }
-    
+
     func clearAll() {
         displayCalculText = "0"
     }
-    
+
     func addNumber(_ number: String) {
-        if displayCalculText == "0" || displayCalculText.contains("=")  {
+        if displayCalculText == "0" || displayCalculText.contains("=") {
             displayCalculText = ""
         }
-        displayCalculText = displayCalculText + String(number)
+        displayCalculText += displayCalculText + String(number)
     }
-    
+
     func addOperator(_ operator: String) {
         replaceOperator()
         displayCalculText.append(`operator`)
@@ -36,22 +36,20 @@ final class Calculation {
             resolveOperation()
         }
     }
-    
+
     func replaceOperator() {
         if !canAddOperator {
             displayCalculText.removeLast(3)
         }
     }
-    
+
     func resolveOperation() {
         guard expressionIsCorrect, expressionHaveEnoughElement else {
             return replaceOperator()
         }
         var operationsToReduce = elements
-        
         while operationsToReduce.count > 1 {
             var operandIndex = 1
-            
             // To manage the priority of calculations
             if let index = operationsToReduce.firstIndex(where: { $0.contains("x") || $0.contains("/")}) {
                 operandIndex = index
@@ -63,7 +61,6 @@ final class Calculation {
             }
             let operand = operationsToReduce[operandIndex]
             var result: Double
-            
             switch operand {
             case "+": result = left + right
             case "-": result = left - right
@@ -77,7 +74,7 @@ final class Calculation {
             operationsToReduce.remove(at: operandIndex-1)
         }
         displayCalculText.append(" = \(operationsToReduce.first!)")
-        
+
         // To handle division by zero. Otherwise 0/0 = ∞ and 1/0 = + ∞
         if displayCalculText.contains("∞") || displayCalculText.contains("NaN") {
             displayCalculText = "Error"
@@ -89,15 +86,15 @@ private extension Calculation {
     var elements: [String] {
         return displayCalculText.split(separator: " ").map { "\($0)" }
     }
-    
+
     var expressionIsCorrect: Bool {
         return elements.last != "+" && elements.last != "-" && elements.last != "x" && elements.last != "/"
     }
-    
+
     var expressionHaveEnoughElement: Bool {
         return elements.count >= 3
     }
-    
+
     var canAddOperator: Bool {
         return elements.last != "+" && elements.last != "-" && elements.last != "x" && elements.last != "/"
     }
